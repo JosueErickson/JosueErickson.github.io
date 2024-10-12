@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda</title>
+  <link rel="stylesheet" href="CSS/style.CSS">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <a href="index.html"><img src="imagenes/Plazavea logoooooooooo.png" alt="Logo" /></a>
+    </div>
+
+    <!-- Buscador -->
+    <div class="navbar-search">
+      <input type="text" placeholder="Buscar productos..." />
+      <button type="submit">Buscar</button>
+    </div>
+
+    <!-- Mi cuenta y carrito -->
+    <div class="navbar-links">
+      <a href="cuenta.html">Mi cuenta</a>
+      <a href="carrito.html">Carrito</a>
+    </div>
+
+    <!-- Categorías desplegables -->
+    <div class="navbar-categories">
+      <button class="dropdown-button">Categorías</button>
+      <div class="dropdown-content">
+        <a href="supermercado.html">Supermercado</a>
+        <a href="electrodomesticos.html">Electrodomésticos</a>
+        <a href="tecnologia.html">Tecnología</a>
+        <a href="hogar.html">Hogar</a>
+        <a href="niñosybebes.html">Niños y Bebes</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="jugueteria.html">Juguetería</a>
+        <a href="deporte.html">Deporte</a>
+      </div>
+    </div>
+
+    <!-- Contacto (redirecciona a otra pestaña) -->
+    <div class="navbar-contact">
+      <a href="contacto.html" target="_blank">Contacto</a>
+    </div>
+  </nav>
+<!-- Carrusel de imágenes -->
+<div class="carousel">
+    <div class="slides">
+      <div class="slide"><img src="imagenes/Plazavea carrusel.png" alt="Plazavea post 1"></div>
+      <div class="slide"><img src="imagenes/Plazavea carrusel 2.png" alt="Plazavea post 2"></div>
+      <div class="slide"><img src="imagenes/plazavea 4.jpg" alt="Plazavea post 3"></div>
+    </div>
+    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+  </div>
+
+  <!-- Sección de productos con precios -->
+  <section class="product-section">
+    <h2>Productos Destacados</h2>
+    <div class="product-cards">
+      <div class="product-card">
+        <img src="imagenes/celular samsung.png" alt="Celular Samsung">
+        <h3>Celular Samsung</h3>
+        <p>$1.750.00</p>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/Computadora Gamer.png" alt="Computadora Gamer">
+        <h3>Computadora Gamer</h3>
+        <p>$2.300.00</p>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/Tablet Sony.png" alt="Tablet Sony">
+        <h3>Tablet Sony</h3>
+        <p>$1.250.00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Banner de anuncio -->
+  <section class="banner-section">
+    <video width="640" height="360" autoplay loop controls>
+      <source src="videos/¡Celebremos nuestro aniversario! - plazaVea (1080p, h264, youtube).mp4" type="video/mp4">
+  </section>
+
+  <!-- Tarjetas con efecto carrusel -->
+  <section class="carousel-cards-section">
+    <h2>Ofertas Especiales</h2>
+    <div class="carousel-cards">
+      <div class="carousel-card">
+        <div class="date">Oct 2024</div>
+        <img src="imagenes/Televisor.png" alt="Televisor Samsung">
+        <h3>Televisor Samsung</h3>
+        <p>$1.100.00</p>
+      </div>
+      <div class="carousel-card">
+        <div class="date">Nov 2024</div>
+        <img src="imagenes/Olla arocera oster.png" alt="Olla arrocera Oster">
+        <h3>Olla arocera Oster</h3>
+        <p>$100.00</p>
+      </div>
+      <div class="carousel-card">
+        <div class="date">Dic 2024</div>
+        <img src="imagenes/Tostadora Oster.png" alt="Tostadora Oster">
+        <h3>Tostadora Oster</h3>
+        <p>$85.00</p>
+      </div>
+    </div>
+    <button class="carousel-prev" onclick="moveCard(-1)">&#10094;</button>
+    <button class="carousel-next" onclick="moveCard(1)">&#10095;</button>
+  </section>
+
+  <!-- Scripts para el carrusel de imágenes y las tarjetas -->
+  <script>
+    let slideIndex = 0;
+    let cardIndex = 0;
+
+    function moveSlide(n) {
+      const slides = document.querySelectorAll('.slide');
+      slideIndex = (slideIndex + n + slides.length) % slides.length;
+      slides.forEach((slide, index) => {
+        slide.style.display = index === slideIndex ? 'block' : 'none';
+      });
+    }
+
+    function moveCard(n) {
+      const cards = document.querySelectorAll('.carousel-card');
+      cardIndex = (cardIndex + n + cards.length) % cards.length;
+      cards.forEach((card, index) => {
+        card.style.display = index === cardIndex ? 'block' : 'none';
+      });
+    }
+
+    // Mostrar la primera imagen y tarjeta por defecto
+    document.addEventListener('DOMContentLoaded', () => {
+      moveSlide(0);
+      moveCard(0);
+    });
+  </script>
+  
+</body>
+</html>

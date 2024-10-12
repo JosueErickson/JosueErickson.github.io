@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <link rel="stylesheet" href="carrito.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sección del carrito de compras -->
+    <h1>Carrito de Compras</h1>
+    <div class="cart">
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Subtotal</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Producto 1</td>
+            <td>2</td>
+            <td>S/. 50.00</td>
+            <td>S/. 100.00</td>
+            <td><button class="delete-btn">X</button></td>
+          </tr>
+          <tr>
+            <td>Producto 2</td>
+            <td>1</td>
+            <td>S/. 80.00</td>
+            <td>S/. 80.00</td>
+            <td><button class="delete-btn">X</button></td>
+          </tr>
+          <!-- Agrega más productos según sea necesario -->
+        </tbody>
+      </table>
+
+      <div class="cart-total">
+        <h3>Total: S/. 180.00</h3>
+        <button class="checkout-btn">Proceder al Pago</button>
+      </div>
+    </div>
+
+    <!-- Sección del historial de compras -->
+    <h2>Historial de Compras</h2>
+    <div class="purchase-history">
+      <table>
+        <thead>
+          <tr>
+            <th>Fecha</th>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Total</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>03/10/2024</td>
+            <td>Producto 3</td>
+            <td>1</td>
+            <td>S/. 60.00</td>
+            <td>Entregado</td>
+          </tr>
+          <tr>
+            <td>01/10/2024</td>
+            <td>Producto 4</td>
+            <td>3</td>
+            <td>S/. 150.00</td>
+            <td>Entregado</td>
+          </tr>
+          <!-- Agrega más registros de compras según sea necesario -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

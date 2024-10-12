@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Cuenta</title>
+  <link rel="stylesheet" href="cuenta.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sección de Perfil -->
+    <div class="profile-section">
+      <div class="profile-info">
+        <img src="imagenes/perfil.png" alt="Foto de perfil" class="profile-pic">
+        <div class="profile-details">
+          <h2>Nombre del Usuario</h2>
+          <p>Email: usuario@example.com</p>
+          <p>Miembro desde: 2022</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú de Opciones -->
+    <div class="account-menu">
+      <ul>
+        <li><a href="#pedidos">Mis Pedidos</a></li>
+        <li><a href="#listas">Mis Listas</a></li>
+        <li><a href="#cambiar-password">Cambiar Contraseña</a></li>
+        <li><a href="#cerrar-sesion" class="logout-btn">Cerrar Sesión</a></li>
+      </ul>
+    </div>
+
+    <!-- Sección de Pedidos -->
+    <div class="orders-section" id="pedidos">
+      <h3>Mis Pedidos</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Pedido #</th>
+            <th>Fecha</th>
+            <th>Producto</th>
+            <th>Total</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>12345</td>
+            <td>04/10/2024</td>
+            <td>Producto 1</td>
+            <td>S/. 150.00</td>
+            <td>Enviado</td>
+          </tr>
+          <tr>
+            <td>67890</td>
+            <td>02/10/2024</td>
+            <td>Producto 2</td>
+            <td>S/. 80.00</td>
+            <td>Entregado</td>
+          </tr>
+          <!-- Agrega más pedidos si es necesario -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Sección de Mis Listas -->
+    <div class="lists-section" id="listas">
+      <h3>Mis Listas</h3>
+      <ul class="wishlist">
+        <li>Producto Favorito 1</li>
+        <li>Producto Favorito 2</li>
+        <li>Producto Favorito 3</li>
+        <!-- Agrega más productos si es necesario -->
+      </ul>
+    </div>
+
+    <!-- Sección de Cambiar Contraseña -->
+    <div class="change-password-section" id="cambiar-password">
+      <h3>Cambiar Contraseña</h3>
+      <form action="cambiar_contrasena.php" method="post">
+        <label for="old-password">Contraseña Actual:</label>
+        <input type="password" id="old-password" name="old-password" required>
+
+        <label for="new-password">Nueva Contraseña:</label>
+        <input type="password" id="new-password" name="new-password" required>
+
+        <label for="confirm-password">Confirmar Nueva Contraseña:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <button type="submit">Cambiar Contraseña</button>
+      </form>
+    </div>
+
+    <!-- Sección de Cerrar Sesión -->
+    <div class="logout-section" id="cerrar-sesion">
+      <h3>¿Deseas cerrar sesión?</h3>
+      <button class="logout-btn">Cerrar Sesión</button>
+    </div>
+  </div>
+</body>
+</html>

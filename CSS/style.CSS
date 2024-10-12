@@ -1,0 +1,199 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #c8392b;
+    padding: 10px;
+  }
+  
+  nav .navbar-logo img {
+    width: 100px;
+  }
+  
+  nav .navbar-search {
+    display: flex;
+    align-items: center;
+  }
+  
+  nav .navbar-search input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #c8392b;
+  }
+  
+  nav .navbar-search button {
+    padding: 5px 10px;
+    background-color: #f8c401;
+    border: none;
+    color: #c8392b;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  nav .navbar-links a,
+  nav .navbar-contact a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+  }
+  
+  nav .navbar-categories {
+    position: relative;
+    display: inline-block;
+  }
+  
+  nav .navbar-categories .dropdown-button {
+    background-color: #f8c401;
+    color: #c8392b;
+    border: none;
+    cursor: pointer;
+  }
+  
+  nav .navbar-categories .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  nav .navbar-categories .dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  nav .navbar-categories .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Mostrar el menú desplegable al pasar el cursor */
+  nav .navbar-categories:hover .dropdown-content {
+    display: block;
+  }
+  
+ /* Carrusel de imágenes */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+  
+  .slides {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+    width: 100%;
+  }
+  
+  .slide img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button.prev {
+    left: 10px;
+  }
+  
+  button.next {
+    right: 10px;
+  }
+  
+  /* Sección de productos */
+  .product-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .product-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+  }
+  
+  .product-card img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  /* Banner de anuncio */
+  .banner-section {
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  .banner-section img {
+    width: 80%;
+    border-radius: 10px;
+  }
+  
+  /* Carrusel de tarjetas */
+  .carousel-cards-section {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .carousel-cards {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-around;
+  }
+  
+  .carousel-card {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    display: none;
+  }
+  
+  .carousel-card img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+
+  
+  button.carousel-prev, button.carousel-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+  }
